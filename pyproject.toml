@@ -1,0 +1,39 @@
+[project]
+name = "vaccine-api"
+version = "1.0.0"
+readme = "README.md"
+requires-python = "== 3.14.*"
+dependencies = [
+    "fastapi[standard]",
+]
+
+[tool.ruff]
+indent-width = 4
+line-length = 120
+output-format = "grouped"
+
+[tool.ruff.analyze]
+detect-string-imports = true
+
+[tool.ruff.format]
+indent-style = "space"
+line-ending = "lf"
+quote-style = "double"
+docstring-code-format = true
+skip-magic-trailing-comma = false
+
+[tool.ruff.lint]
+select = [
+# pycodestyle
+"E",
+# Pyflakes
+"F",
+# pyupgrade
+"UP",
+# flake8-bugbear
+"B",
+# flake8-simplify
+"SIM",
+# isort
+"I",
+]
